@@ -7,7 +7,6 @@ const form = document.getElementById("signup-form");
 const emailInput = document.getElementById("email-input");
 const formMsg = document.getElementById("form-message");
 const submitBtn = document.getElementById("submit-btn");
-const checklist = document.querySelector(".what-you-get");
 
 function storeEmail(email, valid) {
   try {
@@ -85,7 +84,7 @@ form.addEventListener("submit", async (e) => {
 
   form.reset();
   setMsg("Thank you for joining the Home Designs AI newsletter \u2014 you're on the waitlist to get tips, tools and special discounts.", "ok");
-  if (checklist) checklist.scrollIntoView({ behavior: "smooth", block: "center" });
+  window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
   startRedirecting();
   const ok = await sendToFormspree(email, true);
   if (!ok) {
