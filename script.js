@@ -59,7 +59,7 @@ form.addEventListener("submit", async (e) => {
   }
 
   form.reset();
-  setMsg("Redirecting...", "");
+  setMsg("Thank you for joining the Home Designs AI newsletter — you're on the waitlist to get something special related to your space.", "ok");
   const ok = await sendToFormspree(email, true);
   if (!ok) {
     setMsg("Something went wrong. Please try again.", "bad");
@@ -67,5 +67,5 @@ form.addEventListener("submit", async (e) => {
   }
   setTimeout(() => {
     window.location.href = CONFIG.redirectUrl;
-  }, 800);
+  }, 2500);
 });
