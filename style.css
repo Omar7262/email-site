@@ -70,6 +70,7 @@ input.invalid { border-color: #ff8f8f; }
   margin: 4px 0 0;
   max-width: 400px;
 }
+.form-message { font-size: 13px; min-height: 18px; margin-top: 12px; }
 .form-message.ok { color: #7ce08a; }
 .form-message.bad { color: #ff8f8f; }
 
