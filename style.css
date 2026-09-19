@@ -42,15 +42,22 @@ form { display: flex; flex-direction: column; gap: 10px; max-width: 400px; }
 input {
   padding: 13px 14px;
   border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: rgba(0, 0, 0, 0.3);
+  border: 2px solid #7ce08a;
+  background: rgba(0, 0, 0, 0.45);
   color: #fff;
-  font-size: 15px;
+  font-size: 16px;
+  font-weight: 600;
   outline: none;
+  box-shadow: 0 0 0 4px rgba(53, 208, 127, 0.25), 0 0 18px rgba(53, 208, 127, 0.4);
 }
 
-input:focus { border-color: #9db4ff; }
-input.invalid { border-color: #ff8f8f; }
+input::placeholder { color: #9fd8b4; font-weight: 600; }
+
+input:focus {
+  border-color: #7ce08a;
+  box-shadow: 0 0 0 5px rgba(53, 208, 127, 0.4), 0 0 26px rgba(53, 208, 127, 0.55);
+}
+input.invalid { border-color: #ff8f8f; box-shadow: 0 0 0 4px rgba(255, 143, 143, 0.25); }
 
 .btn {
   padding: 13px;
