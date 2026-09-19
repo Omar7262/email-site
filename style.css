@@ -94,9 +94,26 @@ input.invalid { border-color: #ff8f8f; }
 }
 
 .check { color: #35d07f; font-weight: 800; }
-.form-message { font-size: 13px; min-height: 18px; margin-top: 12px; }
-.form-message.ok { color: #7ce08a; }
-.form-message.bad { color: #ff8f8f; }
+.form-message {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.5;
+  min-height: 20px;
+  margin-top: 14px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  max-width: 400px;
+}
+.form-message.ok {
+  color: #0e5a2c;
+  background: #d6f5e0;
+  border: 1px solid #79e29c;
+}
+.form-message.bad {
+  color: #8f1f1f;
+  background: #fde3e3;
+  border: 1px solid #ffa3a3;
+}
 
 .side-image { display: flex; }
 
