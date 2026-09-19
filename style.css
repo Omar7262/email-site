@@ -123,6 +123,44 @@ input.invalid { border-color: #ff8f8f; }
   object-fit: cover;
 }
 
+.side-image { position: relative; }
+
+.thank-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10, 14, 28, 0.62);
+  padding: 24px;
+}
+
+.thank-box {
+  max-width: 340px;
+  text-align: center;
+  background: rgba(16, 19, 32, 0.45);
+  border: 2px solid #35d07f;
+  border-radius: 14px;
+  padding: 28px 22px;
+  color: #fff;
+}
+
+.thank-title {
+  font-size: 30px;
+  font-weight: 900;
+  color: #35d07f;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.thank-box p {
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.45;
+  color: #ffffff;
+  margin-bottom: 0;
+}
+
 @media (max-width: 760px) {
   .split {
     display: block;
