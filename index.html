@@ -7,17 +7,24 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="card">
-    <div class="kicker">EARLY ACCESS</div>
-    <h1>Elevate your space.</h1>
-    <p>Beautiful designs, straight to your inbox. Drop your email for early access — no spam, ever.</p>
+  <main class="split">
+    <section class="side side-copy">
+      <div class="kicker">EARLY ACCESS</div>
+      <h1>Your dream room, designed in seconds.</h1>
+      <p>Hand-in-hand with an AI that understands space, light and style. Drop your email for early access — no spam, ever.</p>
 
-    <form id="signup-form" novalidate>
-      <input id="email-input" type="email" name="email" placeholder="you@example.com" autocomplete="email" required />
-      <button type="submit" class="btn" id="submit-btn">Get Early Access</button>
-    </form>
+      <form id="signup-form" novalidate>
+        <input id="email-input" type="email" name="email" placeholder="you@example.com" autocomplete="email" required />
+        <button type="submit" class="btn" id="submit-btn">Get Free Access</button>
+      </form>
+      <p id="form-message" class="form-message" aria-live="polite"></p>
+    </section>
 
-    <p id="form-message" class="form-message" aria-live="polite"></p>
+    <section class="side side-image">
+      <img id="room-img"
+           src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1000&q=80"
+           alt="AI-generated modern bedroom" />
+    </section>
   </main>
 
   <script src="script.js?v=1"></script>

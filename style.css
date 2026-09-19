@@ -2,41 +2,41 @@
 
 body {
   min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-family: system-ui, -apple-system, sans-serif;
-  background: linear-gradient(135deg, #111321, #1c2a4a);
+  background: #101320;
   color: #fff;
-  padding: 24px;
 }
 
-.card {
-  width: 100%;
-  max-width: 380px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 16px;
-  padding: 32px;
-  text-align: center;
-  backdrop-filter: blur(6px);
+.split {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+
+.side { flex: 1 1 50%; min-width: 320px; }
+
+.side-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 48px 6vw;
 }
 
 .kicker {
   font-size: 12px;
   letter-spacing: 3px;
   color: #9db4ff;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
-h1 { font-size: 34px; margin-bottom: 8px; }
+h1 { font-size: clamp(30px, 4vw, 46px); line-height: 1.15; margin-bottom: 16px; }
 
-p { color: #c6d0e8; font-size: 14px; line-height: 1.5; margin-bottom: 20px; }
+p { color: #c7d0e8; font-size: 15px; line-height: 1.6; margin-bottom: 24px; max-width: 460px; }
 
-form { display: flex; flex-direction: column; gap: 10px; }
+form { display: flex; flex-direction: column; gap: 10px; max-width: 400px; }
 
 input {
-  padding: 12px 14px;
+  padding: 13px 14px;
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   background: rgba(0, 0, 0, 0.3);
@@ -49,7 +49,7 @@ input:focus { border-color: #9db4ff; }
 input.invalid { border-color: #ff8f8f; }
 
 .btn {
-  padding: 12px;
+  padding: 13px;
   border: none;
   border-radius: 8px;
   background: #3f6df5;
@@ -64,3 +64,16 @@ input.invalid { border-color: #ff8f8f; }
 .form-message { font-size: 13px; min-height: 18px; margin-top: 12px; }
 .form-message.ok { color: #7ce08a; }
 .form-message.bad { color: #ff8f8f; }
+
+.side-image { display: flex; }
+
+.side-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 760px) {
+  body { overflow-x: hidden; }
+  .side-image { min-height: 45vh; order: -1; }
+}
