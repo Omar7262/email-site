@@ -64,12 +64,14 @@ input.invalid { border-color: #ff8f8f; }
 .btn:hover { background: #2f58d8; }
 
 .what-you-get {
-  color: #b7c1dc;
+  color: #c3cbdf;
   font-size: 13px;
-  line-height: 1.7;
+  line-height: 1.8;
   margin: 4px 0 0;
   max-width: 400px;
 }
+
+.check { color: #35d07f; font-weight: 700; }
 .form-message { font-size: 13px; min-height: 18px; margin-top: 12px; }
 .form-message.ok { color: #7ce08a; }
 .form-message.bad { color: #ff8f8f; }
