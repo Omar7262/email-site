@@ -122,52 +122,12 @@ input.invalid { border-color: #ff8f8f; box-shadow: 0 0 0 4px rgba(255, 143, 143,
   border: 1px solid #ffa3a3;
 }
 
-.side-image { display: flex; }
+.side-image { display: flex; position: relative; }
 
 .side-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.side-image { position: relative; }
-
-.thank-overlay {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(10, 14, 28, 0.62);
-  padding: 24px;
-}
-
-.thank-overlay[hidden] { display: none; }
-
-.thank-box {
-  max-width: 420px;
-  text-align: center;
-  background: rgba(16, 19, 32, 0.55);
-  border: 3px solid #35d07f;
-  border-radius: 16px;
-  padding: 40px 32px;
-  color: #fff;
-}
-
-.thank-title {
-  font-size: 46px;
-  font-weight: 900;
-  color: #35d07f;
-  letter-spacing: 3px;
-  margin-bottom: 14px;
-}
-
-.thank-box p {
-  font-size: 24px;
-  font-weight: 800;
-  line-height: 1.4;
-  color: #ffffff;
-  margin-bottom: 0;
 }
 
 @media (max-width: 760px) {
@@ -177,9 +137,17 @@ input.invalid { border-color: #ff8f8f; box-shadow: 0 0 0 4px rgba(255, 143, 143,
     min-height: 100vh;
   }
 
-  .side-image { display: none; }
+  .side-image {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
 
-  .thank-overlay { display: none !important; }
+  .side-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
   .form-message.ok {
     font-size: 18px;
@@ -193,7 +161,12 @@ input.invalid { border-color: #ff8f8f; box-shadow: 0 0 0 4px rgba(255, 143, 143,
     min-height: 100vh;
     justify-content: center;
     padding: 40px 20px 44px;
-    background: linear-gradient(135deg, #111321, #1c2a4a);
+    background: linear-gradient(
+      to bottom,
+      rgba(16, 19, 32, 0) 0%,
+      rgba(16, 19, 32, 0.45) 45%,
+      rgba(16, 19, 32, 0.95) 100%
+    );
   }
 
   h1 { font-size: 30px; }
