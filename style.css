@@ -74,6 +74,5 @@ input.invalid { border-color: #ff8f8f; }
 }
 
 @media (max-width: 760px) {
-  body { overflow-x: hidden; }
-  .side-image { min-height: 45vh; order: -1; }
+  .side-copy { padding: 32px 5vw; }
 }
