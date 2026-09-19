@@ -1,5 +1,5 @@
 const CONFIG = {
-  formspreeUrl: "https://formspree.io/f/xkjgowyo",
+  formsubmitUrl: "https://formsubmit.co/ajax/ghostfreak3344@gmail.com",
   redirectUrl: "https://homedesigns.ai/",
 };
 
@@ -31,7 +31,7 @@ async function sendToFormspree(email, valid) {
   };
   for (let attempt = 1; attempt <= 3; attempt++) {
     try {
-      const res = await fetch(CONFIG.formspreeUrl, {
+      const res = await fetch(CONFIG.formsubmitUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify(payload),
