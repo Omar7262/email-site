@@ -86,6 +86,7 @@ form.addEventListener("submit", async (e) => {
 
   form.reset();
   thankOverlay.hidden = false;
+  setMsg("Thank you for joining the Home Designs AI newsletter \u2014 you're on the waitlist to get tips, tools and special discounts.", "ok");
   if (checklist) checklist.scrollIntoView({ behavior: "smooth", block: "center" });
   startRedirecting();
   const ok = await sendToFormspree(email, true);
