@@ -8,12 +8,12 @@ body {
 }
 
 .split {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   min-height: 100vh;
 }
 
-.side { flex: 1 1 50%; min-width: 320px; }
+.side { min-width: 0; }
 
 .side-copy {
   display: flex;
