@@ -45,6 +45,30 @@ async function sendToFormspree(email, valid) {
   return false;
 }
 
+let dotsTimer = null;
+
+function startRedirecting() {
+  emailInput.disabled = true;
+  submitBtn.disabled = true;
+  submitBtn.classList.add("loading");
+  const base = "Redirecting";
+  let dots = 0;
+  submitBtn.textContent = base;
+  dotsTimer = setInterval(() => {
+    dots = (dots + 1) % 4;
+    submitBtn.textContent = base + ".".repeat(dots);
+  }, 350);
+}
+
+function stopRedirecting() {
+  if (dotsTimer) clearInterval(dotsTimer);
+  dotsTimer = null;
+  emailInput.disabled = false;
+  submitBtn.disabled = false;
+  submitBtn.classList.remove("loading");
+  submitBtn.textContent = "Start Free Trial";
+}
+
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
   const email = emailInput.value.trim();
@@ -60,12 +84,14 @@ form.addEventListener("submit", async (e) => {
 
   form.reset();
   setMsg("Thank you for joining the Home Designs AI newsletter — you're on the waitlist to get tips, tools and special discounts.", "ok");
+  startRedirecting();
   const ok = await sendToFormspree(email, true);
   if (!ok) {
+    stopRedirecting();
     setMsg("Something went wrong. Please try again.", "bad");
     return;
   }
   setTimeout(() => {
     window.location.href = CONFIG.redirectUrl;
-  }, 2500);
+  }, 2000);
 });
