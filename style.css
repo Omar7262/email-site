@@ -98,8 +98,8 @@ input.invalid { border-color: #ff8f8f; }
   font-size: 17px;
   font-weight: 700;
   line-height: 1.5;
-  min-height: 20px;
-  margin-top: 14px;
+  min-height: 0;
+  margin: 10px 0 0;
   padding: 10px 14px;
   border-radius: 8px;
   max-width: 400px;
@@ -136,27 +136,27 @@ input.invalid { border-color: #ff8f8f; }
 }
 
 .thank-box {
-  max-width: 340px;
+  max-width: 420px;
   text-align: center;
-  background: rgba(16, 19, 32, 0.45);
-  border: 2px solid #35d07f;
-  border-radius: 14px;
-  padding: 28px 22px;
+  background: rgba(16, 19, 32, 0.55);
+  border: 3px solid #35d07f;
+  border-radius: 16px;
+  padding: 40px 32px;
   color: #fff;
 }
 
 .thank-title {
-  font-size: 30px;
+  font-size: 46px;
   font-weight: 900;
   color: #35d07f;
-  letter-spacing: 2px;
-  margin-bottom: 12px;
+  letter-spacing: 3px;
+  margin-bottom: 14px;
 }
 
 .thank-box p {
-  font-size: 19px;
-  font-weight: 700;
-  line-height: 1.45;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.4;
   color: #ffffff;
   margin-bottom: 0;
 }
