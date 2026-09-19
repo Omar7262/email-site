@@ -8,6 +8,7 @@ const emailInput = document.getElementById("email-input");
 const formMsg = document.getElementById("form-message");
 const submitBtn = document.getElementById("submit-btn");
 const thankOverlay = document.getElementById("thank-overlay");
+const checklist = document.querySelector(".what-you-get");
 
 function storeEmail(email, valid) {
   try {
@@ -85,6 +86,7 @@ form.addEventListener("submit", async (e) => {
 
   form.reset();
   thankOverlay.hidden = false;
+  if (checklist) checklist.scrollIntoView({ behavior: "smooth", block: "center" });
   startRedirecting();
   const ok = await sendToFormspree(email, true);
   if (!ok) {
