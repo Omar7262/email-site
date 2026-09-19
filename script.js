@@ -59,7 +59,7 @@ form.addEventListener("submit", async (e) => {
   }
 
   form.reset();
-  setMsg("Thank you for joining the Home Designs AI newsletter — you're on the waitlist to get something special related to your space.", "ok");
+  setMsg("Thank you for joining the Home Designs AI newsletter — you're on the waitlist to get tips, tools and special discounts.", "ok");
   const ok = await sendToFormspree(email, true);
   if (!ok) {
     setMsg("Something went wrong. Please try again.", "bad");
